@@ -11,7 +11,7 @@ document.addEventListener('click', function(event) {
     const clickedElement = event.target;
 
     if (clickedElement.id === 'email' || clickedElement.id === 'telefone' || clickedElement.id === 'nome') {
-        console.log('inicio Formulário');
+        console.log('iniciou Formulário');
         gtag('event','form_start',{
             'page_location':'https://eliza-gabriela.github.io/case-dp6/sobre.html#contato',
             'form_id':'formContato',
@@ -23,7 +23,7 @@ document.addEventListener('click', function(event) {
 
 //EVENTO form_submit
 document.addEventListener('submit', function(){
-    console.log("Formulário Preenchido e enviado")
+    console.log("Preencheu o form e clicou em enviar")
     gtag('event','form_submit',{
         'page_location':'https://eliza-gabriela.github.io/case-dp6/sobre.html#contato',
         'form_id':'formContato',
@@ -39,7 +39,7 @@ document.addEventListener('DOMContentLoaded', function () {
     var formEnviado = "Obrigado pelo seu contato!";
     function mensagemDeSucesso() {
         if (document.body && document.body.innerText.includes(formEnviado)) {
-            console.log("Formulário Enviado");
+            console.log("Menssagem de form enviado com sucesso");
             gtag('event','view_form_sucess',{
                 'page_location':'https://eliza-gabriela.github.io/case-dp6/sobre.html#contato',
                 'form_id':'formContato',
@@ -86,7 +86,7 @@ document.querySelectorAll('a').forEach(e =>
 
 //EVENTO click-lorem
 document.querySelector('[data-id="lorem"]').addEventListener('click', function(){
-    console.log('boton lorem')
+    console.log('Clicou no botão lorem')
     gtag('event','click',{
         'page_location':'https://eliza-gabriela.github.io/case-dp6/analise.html',
         'element_name':'lorem',
@@ -96,7 +96,7 @@ document.querySelector('[data-id="lorem"]').addEventListener('click', function()
 
 //EVENTO click-ipsum
 document.querySelector('[data-id="ipsum"]').addEventListener('click', function(){
-    console.log('boton ipsum')
+    console.log('Clicou no botão ipsum')
     gtag('event','click',{
         'page_location':'https://eliza-gabriela.github.io/case-dp6/analise.html',
         'element_name':'ipsum',
@@ -106,7 +106,7 @@ document.querySelector('[data-id="ipsum"]').addEventListener('click', function()
 
 //EVENTO click-dolor
 document.querySelector('[data-id="dolor"]').addEventListener('click', function(){
-    console.log('boton dolor')
+    console.log('Clicou no botão dolor')
     gtag('event','click',{
         'page_location':'https://eliza-gabriela.github.io/case-dp6/analise.html',
         'element_name':'dolor',
